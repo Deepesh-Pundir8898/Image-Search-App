@@ -1,0 +1,112 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+body{
+    /* background-color: aquamarine; */
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 4rem;
+}
+h1{
+    font-size: 3rem;
+    color:#007575;
+    text-shadow: 2px 2px 2px #00a3a3;
+}
+.main-container{
+    max-width: 90%;
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0,0,0, 0.3);
+    border-radius: 5px;
+}
+input{
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+}
+
+#show-more-btn,#search-button{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* display: none; */
+    background-color: #1f84ff;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+#show-more-btn:hover,#search-button:hover{
+    color: #1f84ff;
+    background-color: white;
+}
+#image-container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    
+    
+}
+.search-result{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    img{
+        width: 300px;
+        height: 250px;
+        transition: all 0.2s linear;
+       
+    }
+    a{
+        width: 300px;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 1rem;
+        transition: all 0.2s linear;
+
+    }
+}
+.search-result img:hover{
+    transform: scale(1.05);
+}
+.search-result a:hover{
+    text-decoration: underline;
+}
+.loader{
+    margin: auto;
+    width:80px;
+    height: 80px;
+    border-width: 6px 8px 10px 13px;
+    border-style: dotted ;
+    border-color: #1f84ff ;
+    border-radius: 50%;
+    animation: loader 2s linear infinite;
+    display: none;
+}
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
